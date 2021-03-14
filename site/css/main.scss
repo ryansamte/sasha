@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    height:100vh;
+    margin: 0;
+    font-family: 'Poppins', arial;
+    background: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+img {
+    width: 100%;
+}
+
+.nav-container {
+    background: #3a393a;
+
+    a {
+        color: white;
+    }
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    padding: 2em;
+
+    .logo {
+        color: #00F7FF;
+        font-weight: bold;
+    }
+
+    ul {
+        display:flex;
+
+        
+
+        a {
+            display: block;
+            padding: 0 1em;
+        }
+
+        a:hover {
+            color: darkcyan;
+        }
+    }
+}
+
+.social-header, .hero-design {
+    display: none;
+}
+
+.hero {
+    background: #6E00FF;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+.meet {
+    display:flex;
+    font-weight: bold;
+    color: #FF64CB;
+    width:200px;
+    margin:0 auto;
+
+    span {
+        margin-top: 1em;
+        margin-right: 1em;
+    }
+}
+
+.scroll {
+    width: 50px;
+    margin-top: 1em;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+.featured {
+    position: relative;
+}
+
+.featured::before {
+    content: "";
+    width: 200px;
+    height:200px;
+    position: absolute;
+    border-radius: 50%;
+    background: #e5d5fa;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.featured::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 5%;
+    background: darkcyan;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6e00ff;
+    letter-spacing:.2em;
+    font-size: .85em;
+}
+
+.featured-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: -.5em;
+    // display: block;
+}
+
+.featured-desc {
+    color: rgb(223, 219, 219);
+    font-weight: bold;
+    font-size: .9em;
+    line-height: 1.8em;
+    font-weight: 500;
+
+}
+
+.skills {
+    background: #ff64cb;
+
+}
+
+.skills-container ul li {
+    background: rgb(66, 64, 64);
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height:100px;
+        display:flex;
+        place-content: center;
+        margin: 0 auto;
+
+        &.one {
+            width:50px;
+        }
+        &.two {
+            width:250px;
+        }
+        &.three {
+            width:50px;
+        }
+
+        
+    }
+    p {
+        color: rgb(223, 223, 235);
+    }
+
+    .skill-title {
+        font-weight: bold;
+    }
+    
+    .featured-desc {
+        margin-bottom: 2em;
+    }
+    
+}
+
+.portfolio {
+    background:black;
+
+    .subtitle {
+        font-size: 25px;
+    }
+}
+
+
+.portfolio-container a img {
+    border-radius: 1em;
+    margin-bottom:2em;
+}
+
+@media only screen and (min-width:800px){
+
+    .nav-container{
+        background: #3a393a;
+    }
+    .featured, .portfolio {
+        text-align: left;
+    }
+
+    .featured, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+    .left, portfolio-left {
+        display:grid;
+        place-content: center;
+    }
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .skills {
+        margin-top: -5em;
+        margin-bottom: -6em;
+        padding-top: 7em;
+    }
+
+    .skills-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap:1em;
+    }
+
+    .portfolio {
+        padding-top: 7em;
+    }
+    .portfolio-container img {
+        margin-left: 2em;
+    }
+
+    .featured::after {
+        content: "";
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        border-radius: 2%;
+        background: darkcyan;
+        bottom: 0;
+        right: 6%;
+        z-index: -1;
+    }
+}
+
+@media only screen and (min-width:1050px){
+    .hero {
+        height:90vh;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 70% auto;
+        background: unset;
+    }
+    header {
+        padding: 2em 2em 1em 4em;
+        background: #3a393a;
+    }
+
+    .social-header {
+        padding: 2em 4em 2em 0;
+    }
+    .section {
+        padding: 4em;
+    }
+
+    .social-header {
+        display:block;
+
+        ul {
+            display:flex;
+            justify-content:space-between;
+            width: 7em;
+            float:right;
+            color: rgb(241, 247, 247);
+            margin: 0 15px;
+
+            li {
+                display: flex;
+                margin: 0 15px;
+            }
+
+            
+
+            a {
+                color: rgb(235, 240, 240);
+                
+            }
+            a:hover {
+                color: darkcyan;
+                background: white;
+                border-radius: 50%;
+                padding:5px 10px;
+            }
+        }
+    }
+
+    .hero {
+        display:grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: #6e00ff;
+            padding: 6em 8em 6em 4em;
+            text-align:left;
+
+            h1 {
+                font-size:3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+
+    .meet {
+        margin: unset;
+    }
+
+    .hero-design {
+        display: unset;
+        margin-left: -50%;
+        margin-top: 15%;
+        width: 100%;
+    }
+    .portfolio img {
+        float: right;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (min-width:1250px){
+    header {
+        padding: 2em 2em 2em 10em;
+    }
+
+    .social-header {
+        padding: 2em 10em 2em 0;
+    }
+
+    section {
+        padding: 10em 10em 4em 10em;
+    }
+
+    .hero .content {
+        padding: 6em 8em 6em 10em;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    header {
+        padding: 2em 2em 2em 20em;
+    }
+    .social-header {
+        padding: 2em 20em 2em 0;
+    }
+    section {
+        padding: 6em 20em 4em 20em;
+    }
+    .hero .content {
+        padding: 9em 20em 6em 20em;
+    }
+
+} 
